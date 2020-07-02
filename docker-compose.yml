@@ -1,0 +1,15 @@
+  version: '3'
+    
+  services:
+    fractal:
+      build: ./fractal
+      working_dir: /app
+      volumes:
+        - ./datasets/:/app/datasets
+    arabesque:
+      image: dsqcri/arabesque
+      entrypoint: /app/run.sh
+      working_dir: /app
+      volumes:
+        - ./datasets:/app/datasets
+        - ./arabesque:/app
