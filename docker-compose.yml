@@ -6,6 +6,7 @@
       working_dir: /app
       volumes:
         - ./datasets/:/app/datasets
+        - ./fractal:/app/scripts
     arabesque:
       image: dsqcri/arabesque
       entrypoint: /app/run.sh

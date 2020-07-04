@@ -21,4 +21,34 @@ cd /home/arabesque/Arabesque/
 mvn package -DskipTests
 cp ./target/arabesque-1.1.0-SPARK*.jar ./scripts/
 cd ./scripts
-./run_arabesque.sh /app/scripts/cluster.yaml /app/scripts/motifs.yaml
+
+start=`date +%s`
+./run_arabesque.sh /app/scripts/cluster.yaml /app/scripts/3-cliques.yaml
+end=`date +%s`
+time_3_cliques=$((end-start))
+
+start=`date +%s`
+./run_arabesque.sh /app/scripts/cluster.yaml /app/scripts/4-cliques.yaml
+end=`date +%s`
+time_4_cliques=$((end-start))
+
+start=`date +%s`
+./run_arabesque.sh /app/scripts/cluster.yaml /app/scripts/5-cliques.yaml
+end=`date +%s`
+time_5_cliques=$((end-start))
+
+start=`date +%s`
+./run_arabesque.sh /app/scripts/cluster.yaml /app/scripts/3-motifs.yaml
+end=`date +%s`
+time_3_motifs=$((end-start))
+
+start=`date +%s`
+./run_arabesque.sh /app/scripts/cluster.yaml /app/scripts/4-motifs.yaml
+end=`date +%s`
+time_4_motifs=$((end-start))
+
+echo "3-cliques: $time_3_cliques s"
+echo "4-cliques: $time_4_cliques s"
+echo "5-cliques: $time_5_cliques s"
+echo "3-motifs: $time_3_motifs s"
+echo "4-motifs: $time_4_motifs s"

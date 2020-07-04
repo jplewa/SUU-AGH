@@ -1,0 +1,11 @@
+omputation: io.arabesque.gmlib.clique.CliqueComputation
+input_graph_path: reddit.graph
+output_path: Cliques_Output
+#communication_strategy: embeddings
+
+optimizations:
+  - io.arabesque.optimization.CliqueOptimization
+
+# Custom parameters
+arabesque.clique.maxsize: 5
+# arabesque.graph.edge_labelled: true

@@ -10,4 +10,4 @@ RUN \
 
 ENV FRACTAL_HOME=/app/fractal
 
-ENTRYPOINT app=motifs inputgraph=./datasets/reddit.graph steps=3 $FRACTAL_HOME/bin/fractal.sh
+ENTRYPOINT /app/scripts/run.sh

@@ -1,0 +1,8 @@
+computation: io.arabesque.gmlib.motif.MotifComputation
+input_graph_path: reddit.graph
+output_path: Motifs_Output
+#communication_strategy: embeddings
+
+# Custom parameters
+arabesque.motif.maxsize: 4
+#arabesque.graph.edge_labelled: true
