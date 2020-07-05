@@ -1,0 +1,12 @@
+computation: io.arabesque.gmlib.fsm.FSMComputation
+master_computation: io.arabesque.gmlib.fsm.FSMMasterComputation
+input_graph_path: reddit.graph
+output_path: FSM_Output
+
+# Custom parameters
+arabesque.fsm.support: 1000
+arabesque.fsm.maxsize: 2
+
+# Split all aggregations in 10 parts for parallel aggregation
+# (use only with heavy aggregations)
+arabesque.aggregators.default_splits: 10
