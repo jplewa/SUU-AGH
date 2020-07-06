@@ -35,5 +35,4 @@ echo "4-cliques: $time_4_cliques s"
 echo "5-cliques: $time_5_cliques s"
 echo "3-motifs: $time_3_motifs s"
 echo "4-motifs: $time_4_motifs s"
-echo "fsm $time_fsm s"s
-
+echo "fsm: $time_fsm s"
